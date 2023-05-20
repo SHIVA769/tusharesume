@@ -13,7 +13,7 @@ function Register() {
     try {
       const user = await axios.post("api/user/login", values);
       message.success("Login successfull");
-      localStorage.setItem("tusharresume-users", JSON.stringify(user.data));
+      localStorage.setItem("resumebuilder-users", JSON.stringify(user.data));
       setLoading(false);
       navigate("/home");
     } catch (error) {
