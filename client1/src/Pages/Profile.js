@@ -11,7 +11,7 @@ const { TabPane } = Tabs;
 
 function Profile() {
   const [loading, setLoading] = useState(false);
-  const user = JSON.parse(localStorage.getItem("tusharresume-users"));
+  const user = JSON.parse(localStorage.getItem("resumebulider-users"));
   const onFinish = async (values) => {
     setLoading(true);
     try {
@@ -19,7 +19,7 @@ function Profile() {
         ...values,
         _id: user._id,
       });
-      localStorage.setItem("tusharresume-users", JSON.stringify(result.data));
+      localStorage.setItem("resumebuilder-users", JSON.stringify(result.data));
       setLoading(false);
       message.success("Profile updated successfully");
     } catch (error) {

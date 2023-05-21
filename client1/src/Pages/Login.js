@@ -23,7 +23,7 @@ function Register() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("tusharresume-users")) {
+    if (localStorage.getItem("resume-bulider-users")) {
       navigate("/home");
     }
   });
